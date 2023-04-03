@@ -39,19 +39,19 @@ const NavBar = () => {
           direction={{ sm: 'column', md: 'row' }}
           align={{ sm: 'left', md: 'center' }}
         >
-          <a href="" style={{ color: '#3E54AC', fontSize: '20px' }}>
+          <a href="#1" style={{ color: '#3E54AC', fontSize: '20px' }}>
             Home
           </a>
-          <a href="" style={{ color: '#3E54AC', fontSize: '20px' }}>
+          <a href="#2" style={{ color: '#3E54AC', fontSize: '20px' }}>
             Skills
           </a>
-          <a href="" style={{ color: '#3E54AC', fontSize: '20px' }}>
+          <a href="#3" style={{ color: '#3E54AC', fontSize: '20px' }}>
             About me
           </a>
-          <a href="" style={{ color: '#3E54AC', fontSize: '20px' }}>
+          <a href="#4" style={{ color: '#3E54AC', fontSize: '20px' }}>
             Projects
           </a>
-          <a href="" style={{ color: '#3E54AC', fontSize: '20px' }}>
+          <a href="#5" style={{ color: '#3E54AC', fontSize: '20px' }}>
             Contacts
           </a>
         </Stack>

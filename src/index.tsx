@@ -3,13 +3,31 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { ChakraProvider, extendTheme } from '@chakra-ui/react';
+import '@fontsource/montserrat';
+import '@fontsource/alegreya-sans';
+
+const theme = extendTheme({
+  fonts: {
+    heading: `'Monserrat', sans-serif`,
+    body: `'Monserrat', sans-serif`,
+  },
+  colors: {
+    lila: '#AD7BE9',
+    darkBlue: '#3E54AC',
+    lightBlue: '#BFDCE5',
+    white: '#EEEEEE',
+  },
+});
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <ChakraProvider theme={theme}>
+      <App />
+    </ChakraProvider>
   </React.StrictMode>
 );
 

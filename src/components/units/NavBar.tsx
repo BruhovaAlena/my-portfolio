@@ -1,13 +1,14 @@
-import React from 'react';
 import {
   Flex,
   Stack,
   useDisclosure,
   Icon,
-  Text,
   theme,
+  Link,
 } from '@chakra-ui/react';
 import { GiHamburgerMenu } from 'react-icons/gi';
+import { NAV_LINKS } from '../../constants/navLinks';
+import { NavBarItem } from './NavBarItem';
 
 const NavBar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -18,24 +19,14 @@ const NavBar = () => {
       px={4}
       direction={['column', 'column', 'row']}
       justifyContent="space-between"
-      bgColor="white"
       position="sticky"
       top="0"
       width="100%"
       overflow={'hidden'}
       zIndex={1}
+      bgGradient="linear(to-r, #AD7BE9,#3E54AC)"
     >
       <Flex alignItems="center" wrap="wrap">
-        {/* <Flex flexGrow={1} justify="center">
-          <Text
-            ml={[4, 0]}
-            fontSize="3xl"
-            color="black"
-            fontFamily={theme.fonts.body}
-          >
-            Alena
-          </Text>
-        </Flex> */}
         <Icon
           as={GiHamburgerMenu}
           onClick={isOpen ? onClose : onOpen}
@@ -53,56 +44,9 @@ const NavBar = () => {
           align={{ sm: 'left', md: 'center' }}
           spacing="30px"
         >
-          <a
-            href="#home"
-            style={{
-              color: '#000000',
-              fontSize: '20px',
-              fontFamily: theme.fonts.body,
-            }}
-          >
-            Home
-          </a>
-          <a
-            href="#skills"
-            style={{
-              color: '#000000',
-              fontSize: '20px',
-              fontFamily: theme.fonts.body,
-            }}
-          >
-            Skills
-          </a>
-          <a
-            href="#about"
-            style={{
-              color: '#000000',
-              fontSize: '20px',
-              fontFamily: theme.fonts.body,
-            }}
-          >
-            About me
-          </a>
-          <a
-            href="#projects"
-            style={{
-              color: '#000000',
-              fontSize: '20px',
-              fontFamily: theme.fonts.body,
-            }}
-          >
-            Projects
-          </a>
-          <a
-            href="#contacts"
-            style={{
-              color: '#000000',
-              fontSize: '20px',
-              fontFamily: theme.fonts.body,
-            }}
-          >
-            Contacts
-          </a>
+          {NAV_LINKS.map(({ href, text }) => (
+            <NavBarItem href={href} text={text} key={text} />
+          ))}
         </Stack>
       </Flex>
     </Flex>

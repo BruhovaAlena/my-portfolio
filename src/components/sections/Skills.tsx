@@ -105,7 +105,7 @@ const Skills = () => {
           fontFamily={theme.fonts.heading}
           textAlign={{ base: 'center', lg: 'left' }}
         >
-          I am learning
+          I am currently learning
         </Heading>
 
         <Flex

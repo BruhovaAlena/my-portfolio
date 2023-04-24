@@ -1,14 +1,6 @@
-import React from 'react';
-import {
-  Button,
-  Flex,
-  Text,
-  Heading,
-  theme,
-  Image,
-  Show,
-} from '@chakra-ui/react';
+import { Button, Flex, theme, Image, Show } from '@chakra-ui/react';
 import { TypeAnimation } from 'react-type-animation';
+import myPhoto from '../../images/myPhoto.jpg';
 
 const Home = () => {
   return (
@@ -19,8 +11,7 @@ const Home = () => {
       mt={10}
     >
       <Image
-        src="fotka.jpg"
-        alt="Dan Abramov"
+        src={myPhoto}
         w={{ base: '200px', md: '250px', lg: '290px' }}
         h={{ base: '250px', md: '320px', lg: '370px' }}
         borderRadius="20px"
@@ -39,7 +30,11 @@ const Home = () => {
               500,
               'Hi, I am Alena, Frontend Developer',
               500,
-              'Hi, I am Alena, Book Lover',
+              'Hi, I am Alena, Books Addict',
+              500,
+              'Hi, I am Alena, Plants Lover',
+              500,
+              'Hi, I am Alena, #1 Harry Styles fan',
               500,
               'Hi, I am Alena,',
               500,
@@ -55,7 +50,11 @@ const Home = () => {
               500,
               'Hi, I am Alena, Frontend Developer',
               500,
-              'Hi, I am Alena, Book Lover',
+              'Hi, I am Alena, Books Addict',
+              500,
+              'Hi, I am Alena, Plants Lover',
+              500,
+              'Hi, I am Alena, #1 Harry Styles fan',
               500,
               'Hi, I am Alena,',
               500,

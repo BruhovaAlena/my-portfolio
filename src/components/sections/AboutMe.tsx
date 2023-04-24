@@ -1,5 +1,5 @@
-import React from 'react';
 import { Flex, Text, Heading, Box, theme } from '@chakra-ui/react';
+
 const AboutMe = () => {
   return (
     <Box>
@@ -29,12 +29,14 @@ const AboutMe = () => {
           textAlign={{ base: 'justify', lg: 'left' }}
           mt="10px"
         >
-          Young, driven and motivated self-taught developer with interest in
-          building digital products using modern web technologies. Web
-          technologies and programming have been my hobby, which has become a
-          passion.Maybe I am not the best one, but I have desire and mindset to
-          always improve, learn fast and become as good as possible. I'm now
-          seeking a full-time role where I can contribute my skills in coding.
+          Young, driven and motivated self-taught developer based in Slovakia
+          with interest in building digital products using modern web
+          technologies. Web technologies and programming have been my hobby,
+          which has become a passion. Maybe I am not the best one, but I have
+          desire and mindset to always improve, learn fast and become as good as
+          possible.I am currently looking for a job, where I can improve my
+          skills as a developer, build modern web or hybrid mobile applications
+          and be useful part of the team.
         </Text>
       </Flex>
     </Box>

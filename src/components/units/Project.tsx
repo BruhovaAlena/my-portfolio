@@ -1,23 +1,35 @@
 import React from 'react';
-import { Flex, Text, Link, theme, Box } from '@chakra-ui/react';
-import ItemSkill from './ItemSkill';
+import { Flex, Text, Link, theme, Box, Icon } from '@chakra-ui/react';
 import UsedTechIcon from './UsedTechIcon';
 import { IconName } from '../../constants/icon';
+import { TfiApple } from 'react-icons/tfi';
+import { AiFillAndroid } from 'react-icons/ai';
+
+export type UsedTech = {
+  text: string;
+  icon: IconName;
+};
 
 type ProjectProps = {
   title: string;
   desc: string;
-  githubLink?: string;
-  demoLink: string;
-  tools: IconName[];
+  githubLinkFe?: string;
+  githubLinkBe?: string;
+  demoLink?: string;
+  tools: UsedTech[];
+  apple?: string;
+  android?: string;
 };
 
 const Project = ({
   desc,
   title,
   tools,
-  githubLink,
+  githubLinkFe,
+  githubLinkBe,
   demoLink,
+  apple,
+  android,
 }: ProjectProps) => {
   return (
     <Flex
@@ -29,41 +41,78 @@ const Project = ({
       py="10px"
       gap="10px"
       mb="20px"
+      width="full"
     >
       <Text fontSize="3xl" fontFamily={theme.fonts.heading} color="black">
         {title}
       </Text>
-      <Flex flexDir={{ base: 'column', lg: 'row' }}>
-        <Flex flexDir="column" w="100%">
+      <Flex flexDir="column">
+        <Flex flexDir="column">
           <Text color="black" fontFamily={theme.fonts.body}>
             {desc}
           </Text>
-          {githubLink && (
+
+          {githubLinkFe && (
             <Link
               fontFamily={theme.fonts.body}
-              href={githubLink}
+              href={githubLinkFe}
               isExternal
               color="lila"
               fontWeight="semibold"
             >
-              Github code
+              Github FE code
             </Link>
           )}
-
-          <Link
-            fontFamily={theme.fonts.body}
-            href={demoLink}
-            isExternal
-            color="darkBlue"
-            fontWeight="semibold"
-          >
-            Demo
-          </Link>
+          {githubLinkBe && (
+            <Link
+              fontFamily={theme.fonts.body}
+              href={githubLinkBe}
+              isExternal
+              color="lila"
+              fontWeight="semibold"
+            >
+              Github BE code
+            </Link>
+          )}
+          {demoLink && (
+            <Link
+              fontFamily={theme.fonts.body}
+              href={demoLink}
+              isExternal
+              color="darkBlue"
+              fontWeight="semibold"
+            >
+              Demo
+            </Link>
+          )}
+          {apple && android && (
+            <Flex gap="10px" mt="10px">
+              <Link
+                href={apple}
+                isExternal
+                _hover={{ backgroundColor: 'lila', borderRadius: '6px' }}
+              >
+                <Icon as={TfiApple} w={10} h={10} color="black" />
+              </Link>
+              <Link
+                href={android}
+                isExternal
+                _hover={{ backgroundColor: 'lila', borderRadius: '6px' }}
+              >
+                <Icon as={AiFillAndroid} w={10} h={10} color="black" />
+              </Link>
+            </Flex>
+          )}
         </Flex>
 
-        <Box w="100%">
-          <Text color="black" fontFamily={theme.fonts.heading} fontSize="lg">
-            Tech used
+        <Box>
+          <Text
+            color="black"
+            fontFamily={theme.fonts.heading}
+            fontSize="lg"
+            mt="20px"
+          >
+            Tech Stack
           </Text>
           <Box
             mt="5px"
@@ -73,9 +122,9 @@ const Project = ({
             borderRadius="10px"
             mb="10px"
           ></Box>
-          <Flex flexWrap="wrap">
+          <Flex flexWrap="wrap" gap="10px">
             {tools.map((tool) => (
-              <UsedTechIcon iconName={tool} />
+              <UsedTechIcon iconName={tool.icon} title={tool.text} />
             ))}
           </Flex>
         </Box>

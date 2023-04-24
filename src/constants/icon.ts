@@ -13,6 +13,8 @@ import {
   SiChakraui,
   SiStyledcomponents,
   SiPostgresql,
+  SiNextdotjs,
+  SiTailwindcss,
 } from 'react-icons/si';
 import { FaNodeJs } from 'react-icons/fa';
 import { TbBrandReactNative } from 'react-icons/tb';
@@ -36,6 +38,8 @@ export enum IconName {
   NODEJS = 'nodejs',
   POSTGRES = 'postgres',
   REST = 'rest',
+  NEXT = 'next',
+  TAILWIND = 'tailwind',
 }
 
 export const IconMapper = {
@@ -56,4 +60,6 @@ export const IconMapper = {
   [IconName.NODEJS]: FaNodeJs,
   [IconName.POSTGRES]: SiPostgresql,
   [IconName.REST]: RestIcon,
+  [IconName.TAILWIND]: SiTailwindcss,
+  [IconName.NEXT]: SiNextdotjs,
 };

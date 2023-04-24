@@ -33,20 +33,68 @@ const Skills = () => {
           flexWrap="wrap"
           justifyContent={{ base: 'center', lg: 'flex-start' }}
         >
-          <ItemSkill text="JavaScript" iconName={IconName.JAVASCRIPT} />
-          <ItemSkill text="TypeScript" iconName={IconName.TYPESCRIPT} />
-          <ItemSkill text="React" iconName={IconName.REACT} />
-          <ItemSkill text="React Native" iconName={IconName.REACT_NATIVE} />
           <ItemSkill text="HTML5" iconName={IconName.HTML} />
-          <ItemSkill text="CSS 3" iconName={IconName.CSS} />
-          <ItemSkill text="styled components" iconName={IconName.STYLED} />
-          <ItemSkill text="Chakra UI" iconName={IconName.CHAKRA} />
-          <ItemSkill text="Git" iconName={IconName.GIT} />
-          <ItemSkill text="Express" iconName={IconName.EXPRESS} />
-          <ItemSkill text="Firebase" iconName={IconName.FIREBASE} />
-          <ItemSkill text="Node.js" iconName={IconName.NODEJS} />
-          <ItemSkill text="Prisma" iconName={IconName.PRISMA} />
-          <ItemSkill text="PostgreSQL" iconName={IconName.POSTGRES} />
+          <ItemSkill text="CSS3" iconName={IconName.CSS} />
+          <ItemSkill
+            text="JavaScript"
+            iconName={IconName.JAVASCRIPT}
+            urlAddress="https://javascript.info/"
+          />
+          <ItemSkill
+            text="TypeScript"
+            iconName={IconName.TYPESCRIPT}
+            urlAddress="https://www.typescriptlang.org/"
+          />
+          <ItemSkill
+            text="React"
+            iconName={IconName.REACT}
+            urlAddress="https://react.dev/"
+          />
+          <ItemSkill
+            text="React Native"
+            iconName={IconName.REACT_NATIVE}
+            urlAddress="https://reactnative.dev/"
+          />
+          <ItemSkill
+            text="styled components"
+            iconName={IconName.STYLED}
+            urlAddress="https://styled-components.com/"
+          />
+          <ItemSkill
+            text="Chakra UI"
+            iconName={IconName.CHAKRA}
+            urlAddress="https://chakra-ui.com/"
+          />
+          <ItemSkill
+            text="Git"
+            iconName={IconName.GIT}
+            urlAddress="https://git-scm.com/"
+          />
+          <ItemSkill
+            text="Express"
+            iconName={IconName.EXPRESS}
+            urlAddress="https://expressjs.com/"
+          />
+          <ItemSkill
+            text="Firebase"
+            iconName={IconName.FIREBASE}
+            urlAddress="https://firebase.google.com/"
+          />
+          <ItemSkill
+            text="Node.js"
+            iconName={IconName.NODEJS}
+            urlAddress="https://nodejs.org/en"
+          />
+          <ItemSkill
+            text="Prisma"
+            iconName={IconName.PRISMA}
+            urlAddress="https://www.prisma.io/"
+          />
+          <ItemSkill
+            text="PostgreSQL"
+            iconName={IconName.POSTGRES}
+            urlAddress="https://www.postgresql.org/"
+          />
           <ItemSkill text="Rest API" iconName={IconName.REST} />
         </Flex>
       </Flex>
@@ -66,9 +114,16 @@ const Skills = () => {
           flexWrap="wrap"
           justifyContent={{ base: 'center', lg: 'flex-start' }}
         >
-          <ItemSkill text="Express" iconName={IconName.EXPRESS} />
-          <ItemSkill text="Firebase " iconName={IconName.FIREBASE} />
-          <ItemSkill text="React Query" iconName={IconName.REACT_QUERY} />
+          <ItemSkill
+            text="Next.js"
+            iconName={IconName.NEXT}
+            urlAddress="https://nextjs.org/"
+          />
+          <ItemSkill
+            text="Tailwind"
+            iconName={IconName.TAILWIND}
+            urlAddress="https://tailwindcss.com/"
+          />
         </Flex>
       </Flex>
     </Box>

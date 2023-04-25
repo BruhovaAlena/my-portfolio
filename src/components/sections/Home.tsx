@@ -1,4 +1,4 @@
-import { Button, Flex, theme, Image, Show } from '@chakra-ui/react';
+import { Button, Flex, theme, Image, Show, Text } from '@chakra-ui/react';
 import { TypeAnimation } from 'react-type-animation';
 import myPhoto from '../../images/myPhoto.jpg';
 
@@ -26,17 +26,13 @@ const Home = () => {
         <Show below="md">
           <TypeAnimation
             sequence={[
-              'Hi, I am Alena,',
+              ' Frontend Developer',
               500,
-              'Hi, I am Alena, Frontend Developer',
+              ' Books Addict',
               500,
-              'Hi, I am Alena, Books Addict',
+              ' Plants Lover',
               500,
-              'Hi, I am Alena, Plants Lover',
-              500,
-              'Hi, I am Alena, #1 Harry Styles fan',
-              500,
-              'Hi, I am Alena,',
+              ' #1 Harry Styles fan',
               500,
             ]}
             style={{ fontSize: '16px', fontFamily: theme.fonts.heading }}
@@ -44,24 +40,36 @@ const Home = () => {
           />
         </Show>
         <Show above="md">
-          <TypeAnimation
-            sequence={[
-              'Hi, I am Alena,',
-              500,
-              'Hi, I am Alena, Frontend Developer',
-              500,
-              'Hi, I am Alena, Books Addict',
-              500,
-              'Hi, I am Alena, Plants Lover',
-              500,
-              'Hi, I am Alena, #1 Harry Styles fan',
-              500,
-              'Hi, I am Alena,',
-              500,
-            ]}
-            style={{ fontSize: '32px', fontFamily: theme.fonts.heading }}
-            repeat={Infinity}
-          />
+          <Flex>
+            <Text
+              fontSize="32px"
+              fontFamily={theme.fonts.heading}
+              fontWeight="bold"
+              mr="5px"
+              color="white"
+            >
+              Hi, I am Alena,
+            </Text>
+            <TypeAnimation
+              sequence={[
+                'Frontend Developer',
+                500,
+                'Books Addict',
+                500,
+                'Plants Lover',
+                500,
+                '#1 Harry Styles fan',
+                500,
+              ]}
+              style={{
+                fontSize: '32px',
+                fontFamily: theme.fonts.heading,
+                fontWeight: 'bold',
+                color: '#AD7BE9',
+              }}
+              repeat={Infinity}
+            />
+          </Flex>
         </Show>
 
         <Button
@@ -72,6 +80,9 @@ const Home = () => {
           color="white"
           w="200px"
           fontFamily={theme.fonts.body}
+          _hover={{
+            bgGradient: 'linear(to-l, #AD7BE9,#3E54AC)',
+          }}
         >
           <a href="#projects">Projects</a>
         </Button>

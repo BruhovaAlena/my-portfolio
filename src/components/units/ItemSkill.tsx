@@ -1,4 +1,3 @@
-import React from 'react';
 import { Flex, Text, theme, Icon, Link } from '@chakra-ui/react';
 import { IconName, IconMapper } from '../../constants/icon';
 
@@ -10,20 +9,24 @@ type ItemSkillProps = {
 
 const ItemSkill = ({ text, iconName, urlAddress }: ItemSkillProps) => {
   return (
-    <Link href={urlAddress} isExternal>
+    <Link href={urlAddress} isExternal _hover={{ color: 'white' }}>
       <Flex
         borderRadius="6px"
         bgColor="white"
-        borderWidth="1px"
+        borderWidth="2px"
         borderColor="lila"
         height="100px"
         w="100px"
         alignItems="center"
-        color="apricote"
         fontFamily={theme.fonts.body}
         flexDir="column"
         pt="10px"
-        _hover={{ backgroundColor: 'lila', borderRadius: '6px' }}
+        _hover={{
+          borderRadius: '6px',
+          bgGradient: 'linear(to-r, #AD7BE9,#3E54AC)',
+          color: 'white',
+          border: 'none',
+        }}
       >
         <Icon as={IconMapper[iconName]} w="40px" h="40px" />
         <Flex h="100%" w="100%" alignItems="center" justifyContent="center">

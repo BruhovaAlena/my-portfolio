@@ -15,12 +15,8 @@ const theme = extendTheme({
   colors: {
     lila: '#AD7BE9',
     darkBlue: '#3E54AC',
-    lightBlue: '#BFDCE5',
     white: '#EEEEEE',
-    green: '#b5b830',
-    purple: '#7c57ed',
-    darkGreen: '#3d8b7d',
-    background: '#fff0f0',
+    darkBackground: '#020517',
   },
 });
 

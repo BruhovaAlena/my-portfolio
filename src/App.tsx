@@ -9,7 +9,7 @@ import Footer from './components/sections/Footer';
 
 function App() {
   return (
-    <Flex flexDir="column" alignItems="center">
+    <Flex flexDir="column" alignItems="center" bgColor="black">
       <NavBar />
       <Box maxWidth="1500px">
         <Box id="home">

@@ -1,9 +1,6 @@
-import React from 'react';
 import { Flex, Text, Link, theme, Box, Icon } from '@chakra-ui/react';
 import UsedTechIcon from './UsedTechIcon';
 import { IconName } from '../../constants/icon';
-import { TfiApple } from 'react-icons/tfi';
-import { AiFillAndroid } from 'react-icons/ai';
 
 export type UsedTech = {
   text: string;
@@ -35,32 +32,41 @@ const Project = ({
     <Flex
       flexDir="column"
       borderRadius="10px"
-      borderWidth="1px"
+      borderWidth="3px"
       borderColor="lila"
-      px="10px"
-      py="10px"
+      px="20px"
+      pb="20px"
+      pt="10px"
       gap="10px"
       mb="20px"
       width="full"
+      bgColor="white"
+      justifyContent="space-between"
     >
-      <Text fontSize="3xl" fontFamily={theme.fonts.heading} color="black">
-        {title}
-      </Text>
+      <Flex flexDir="column">
+        <Text
+          fontSize="3xl"
+          fontFamily={theme.fonts.heading}
+          color="black"
+          fontWeight="bold"
+        >
+          {title}
+        </Text>
+        <Text color="black" fontFamily={theme.fonts.body}>
+          {desc}
+        </Text>
+      </Flex>
       <Flex flexDir="column">
         <Flex flexDir="column">
-          <Text color="black" fontFamily={theme.fonts.body}>
-            {desc}
-          </Text>
-
           {githubLinkFe && (
             <Link
               fontFamily={theme.fonts.body}
               href={githubLinkFe}
               isExternal
-              color="lila"
+              color="darkBlue"
               fontWeight="semibold"
             >
-              Github FE code
+              Github FE repository
             </Link>
           )}
           {githubLinkBe && (
@@ -68,10 +74,10 @@ const Project = ({
               fontFamily={theme.fonts.body}
               href={githubLinkBe}
               isExternal
-              color="lila"
+              color="darkBlue"
               fontWeight="semibold"
             >
-              Github BE code
+              Github BE repository
             </Link>
           )}
           {demoLink && (
@@ -86,20 +92,24 @@ const Project = ({
             </Link>
           )}
           {apple && android && (
-            <Flex gap="10px" mt="10px">
+            <Flex flexDir="column">
               <Link
                 href={apple}
                 isExternal
-                _hover={{ backgroundColor: 'lila', borderRadius: '6px' }}
+                color="darkBlue"
+                fontWeight="semibold"
+                fontFamily={theme.fonts.body}
               >
-                <Icon as={TfiApple} w={10} h={10} color="black" />
+                App Store
               </Link>
               <Link
                 href={android}
                 isExternal
-                _hover={{ backgroundColor: 'lila', borderRadius: '6px' }}
+                color="darkBlue"
+                fontWeight="semibold"
+                fontFamily={theme.fonts.body}
               >
-                <Icon as={AiFillAndroid} w={10} h={10} color="black" />
+                Google Play
               </Link>
             </Flex>
           )}

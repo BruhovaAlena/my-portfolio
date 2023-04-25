@@ -1,4 +1,3 @@
-import React from 'react';
 import { Heading, Box, theme, Flex, SimpleGrid } from '@chakra-ui/react';
 import Project, { UsedTech } from '../units/Project';
 import { IconName } from '../../constants/icon';
@@ -110,7 +109,7 @@ const Projects = () => {
       alignItems={{ base: 'center', lg: 'flex-start' }}
     >
       <Heading
-        color="black"
+        color="white"
         fontFamily={theme.fonts.heading}
         textAlign={{ base: 'center', lg: 'left' }}
       >

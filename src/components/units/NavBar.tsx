@@ -1,11 +1,4 @@
-import {
-  Flex,
-  Stack,
-  useDisclosure,
-  Icon,
-  theme,
-  Link,
-} from '@chakra-ui/react';
+import { Flex, Stack, useDisclosure, Icon } from '@chakra-ui/react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { NAV_LINKS } from '../../constants/navLinks';
 import { NavBarItem } from './NavBarItem';
@@ -33,7 +26,7 @@ const NavBar = () => {
           display={['inline', 'inline', 'none']}
           w="40px"
           h="40px"
-          color="black"
+          color="white"
         />
       </Flex>
       <Flex

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Flex, Box, theme, Heading } from '@chakra-ui/react';
 import ItemSkill from '../units/ItemSkill';
 import { IconName } from '../../constants/icon';
@@ -13,7 +12,7 @@ const Skills = () => {
         alignItems={{ base: 'center', lg: 'flex-start' }}
       >
         <Heading
-          color="black"
+          color="white"
           fontFamily={theme.fonts.heading}
           textAlign={{ base: 'center', lg: 'left' }}
         >
@@ -101,7 +100,7 @@ const Skills = () => {
       <Flex flexDir="column" mt="40px" mx={{ base: '10px', md: '80px' }}>
         <Heading
           size="md"
-          color="black"
+          color="white"
           fontFamily={theme.fonts.heading}
           textAlign={{ base: 'center', lg: 'left' }}
         >

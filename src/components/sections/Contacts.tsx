@@ -12,7 +12,7 @@ const Contacts = () => {
     >
       <Heading
         fontFamily={theme.fonts.heading}
-        color="black"
+        color="white"
         textAlign={{ sm: 'center', lg: 'left' }}
       >
         Contacts
@@ -26,7 +26,7 @@ const Contacts = () => {
         borderRadius="10px"
       ></Box>
       <Text
-        color="black"
+        color="white"
         fontFamily={theme.fonts.body}
         textAlign={{ base: 'justify', lg: 'left' }}
         mt="10px"
@@ -39,20 +39,26 @@ const Contacts = () => {
           href="https://www.linkedin.com/in/alena-br%C5%AFhov%C3%A1-336626193/"
           isExternal
         >
-          <Icon as={BsLinkedin} color={'black'} w={10} h={10} />
+          <Icon as={BsLinkedin} color={'lila'} w={10} h={10} />
         </Link>
         <Link href="https://github.com/BruhovaAlena" isExternal>
-          <Icon as={BsGithub} color={'black'} w={10} h={10} />
+          <Icon as={BsGithub} color={'lila'} w={10} h={10} />
         </Link>
       </Flex>
       <Text
-        color="black"
+        color="white"
         fontFamily={theme.fonts.body}
         textAlign={{ base: 'justify', lg: 'left' }}
         mt="10px"
       >
         or you can send me an email:{' '}
-        <Text as="mark" bgColor="lila" fontWeight="semibold" borderRadius="6px">
+        <Text
+          as="mark"
+          bgColor="lila"
+          fontWeight="semibold"
+          borderRadius="2px"
+          px="2px"
+        >
           bruhovaalena@gmail.com
         </Text>
       </Text>

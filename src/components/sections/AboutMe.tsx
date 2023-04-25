@@ -10,7 +10,7 @@ const AboutMe = () => {
         alignItems={{ base: 'center', lg: 'flex-start' }}
       >
         <Heading
-          color="black"
+          color="white"
           fontFamily={theme.fonts.heading}
           textAlign={{ sm: 'center', lg: 'left' }}
         >
@@ -24,7 +24,7 @@ const AboutMe = () => {
           borderRadius="10px"
         ></Box>
         <Text
-          color="black"
+          color="white"
           fontFamily={theme.fonts.body}
           textAlign={{ base: 'justify', lg: 'left' }}
           mt="10px"

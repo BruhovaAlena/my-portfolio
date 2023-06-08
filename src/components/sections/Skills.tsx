@@ -55,6 +55,11 @@ const Skills = () => {
             urlAddress="https://reactnative.dev/"
           />
           <ItemSkill
+            text="React Query"
+            iconName={IconName.REACT_QUERY}
+            urlAddress="https://tanstack.com/query/latest"
+          />
+          <ItemSkill
             text="styled components"
             iconName={IconName.STYLED}
             urlAddress="https://styled-components.com/"
@@ -122,6 +127,11 @@ const Skills = () => {
             text="Tailwind"
             iconName={IconName.TAILWIND}
             urlAddress="https://tailwindcss.com/"
+          />
+          <ItemSkill
+            text="Redux"
+            iconName={IconName.REDUX}
+            urlAddress="https://react-icons.github.io/react-icons/search?q=redux"
           />
         </Flex>
       </Flex>

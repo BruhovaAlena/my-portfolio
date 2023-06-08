@@ -15,6 +15,7 @@ import {
   SiPostgresql,
   SiNextdotjs,
   SiTailwindcss,
+  SiRedux,
 } from 'react-icons/si';
 import { FaNodeJs } from 'react-icons/fa';
 import { TbBrandReactNative } from 'react-icons/tb';
@@ -40,6 +41,7 @@ export enum IconName {
   REST = 'rest',
   NEXT = 'next',
   TAILWIND = 'tailwind',
+  REDUX = 'redux',
 }
 
 export const IconMapper = {
@@ -62,4 +64,5 @@ export const IconMapper = {
   [IconName.REST]: RestIcon,
   [IconName.TAILWIND]: SiTailwindcss,
   [IconName.NEXT]: SiNextdotjs,
+  [IconName.REDUX]: SiRedux,
 };

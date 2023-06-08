@@ -16,6 +16,7 @@ import {
   SiNextdotjs,
   SiTailwindcss,
   SiRedux,
+  SiReacthookform,
 } from 'react-icons/si';
 import { FaNodeJs } from 'react-icons/fa';
 import { TbBrandReactNative } from 'react-icons/tb';
@@ -42,6 +43,7 @@ export enum IconName {
   NEXT = 'next',
   TAILWIND = 'tailwind',
   REDUX = 'redux',
+  REACT_HOOK_FORM = 'react_hook_form',
 }
 
 export const IconMapper = {
@@ -65,4 +67,5 @@ export const IconMapper = {
   [IconName.TAILWIND]: SiTailwindcss,
   [IconName.NEXT]: SiNextdotjs,
   [IconName.REDUX]: SiRedux,
+  [IconName.REACT_HOOK_FORM]: SiReacthookform,
 };

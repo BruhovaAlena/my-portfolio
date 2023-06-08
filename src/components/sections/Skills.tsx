@@ -56,6 +56,11 @@ const Skills = () => {
           />
           <ItemSkill
             text="React Query"
+            iconName={IconName.REACT_HOOK_FORM}
+            urlAddress="https://www.react-hook-form.com/"
+          />
+          <ItemSkill
+            text="React Hook Form"
             iconName={IconName.REACT_QUERY}
             urlAddress="https://tanstack.com/query/latest"
           />

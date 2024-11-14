@@ -1,104 +1,82 @@
-import { Heading, Box, theme, Flex, SimpleGrid } from '@chakra-ui/react';
+import { Heading, Box, Flex } from '@chakra-ui/react';
 import Project, { UsedTech } from '../units/Project';
 import { IconName } from '../../constants/icon';
 
 export type ProjectType = {
   title: string;
-  desc: string;
+  desc: string[];
+  date?: string;
   icons: UsedTech[];
-  githubLinkFe?: string;
-  githubLinkBe?: string;
-  demoLink?: string;
   apple?: string;
   android?: string;
+  link?: string
 };
 
-const projects: ProjectType[] = [
+const experience: ProjectType[] = [
   {
-    title: 'Sanity',
-    desc: 'Hybrid mobile app developed in React Native for iOS and Android. This app was created in cooperation with VUDPaP as part of Digital League educational programme. Main goal of this app is to help children suffering from anxiety.',
+    title: 'Frontend Developer - Xploro AI app',
+    date: 'July 2024 - Present',
+    desc: [
+      'development of mobile app Xploro AI with React Native', 'learning of using AI platform Claude',
+      'collaborating with UX/UI designers and dev team',
+      'troubleshooting and fixing front-end issues'
+
+    ],
+    apple: 'https://apps.apple.com/sk/app/xploro-ai-travel-audio-guide/id6464040011',
+    android: 'https://play.google.com/store/apps/details?id=com.advixory.xploro&hl=sk',
+    icons:[   
+      //TODO add 
+      { icon: IconName.REACT_NATIVE, text: 'React Native' },
+      { icon: IconName.TYPESCRIPT, text: 'TypeScript' },
+      { icon: IconName.NEXT, text: 'Next.js'}
+
+    ]
+  },
+  { 
+    title: 'Frontend Developer at Dactyl Group s.r.o.',
+    date: 'Sep 2023 - Apr 2024',
+    desc: ['mobile app and web development', 'building responsive web apps', 'assisting in the creation of web pages/mobiles apps and user interfaces', 'collaborating with UX/UI designers and dev teams', 'troubleshooting and fixing front-end issues'],
     icons: [
       { icon: IconName.REACT, text: 'React' },
       { icon: IconName.REACT_NATIVE, text: 'React Native' },
+      { icon: IconName.EXPO, text: 'Expo' },
+      { icon: IconName.TYPESCRIPT, text: 'TypeScript' },
+      { icon: IconName.NEXT, text: 'Next.js'},
+      { icon: IconName.GIT, text: 'Git' },
+      { icon: IconName.STYLED, text: 'styled components'},
+      { icon: IconName.REST, text: 'Rest API' },
+      { icon: IconName.TAILWIND, text: 'Tailwind'},
+      { icon: IconName.REACT_QUERY, text: 'React Query'},
+      { icon: IconName.FIGMA, text: 'Figma'}
+  ]
+  },
+ 
+  {
+    title: 'Intership - Frontend Developer at Digital League',
+    date: 'Feb 2022 - Apr 2023',
+    desc: [
+      'development of hybrid mobile app in React Native for iOS and Android', 
+      'learning and applying front-end development best practices'
+    ],
+    link:'https://drive.google.com/file/d/1uGMA1wSY6m5E1dKOdGhasXP5p9BN7eiq/view?usp=sharing',
+    apple:
+    'https://apps.apple.com/gb/app/sanity-app/id1669729843?platform=iphone',
+    android:
+    'https://play.google.com/store/apps/details?id=sk.bluelemons.sanity&hl=sk&gl=US',
+    icons: [
+      { icon: IconName.REACT_NATIVE, text: 'React Native' },
+      { icon: IconName.EXPO, text: 'Expo' },
       { icon: IconName.TYPESCRIPT, text: 'TypeScript' },
       { icon: IconName.GIT, text: 'Git' },
       { icon: IconName.STYLED, text: 'styled components' },
       { icon: IconName.REST, text: 'Rest API' },
-    ],
-    apple:
-      'https://apps.apple.com/gb/app/sanity-app/id1669729843?platform=iphone',
-    android:
-      'https://play.google.com/store/apps/details?id=sk.bluelemons.sanity&hl=sk&gl=US',
-  },
-  {
-    title: 'Events app',
-    desc: 'An event management tool developed as a fullstack web application. This application is intended for two types of users. An organizer user can create and manage events. An ordinary user can sign for an event, sign out of an event and view the details of each event.',
-    icons: [
-      { icon: IconName.REACT, text: 'React' },
-      { icon: IconName.TYPESCRIPT, text: 'Typescript' },
-      { icon: IconName.CHAKRA, text: 'Chakra UI' },
-      { icon: IconName.REACT_QUERY, text: 'React Query' },
-      { icon: IconName.NODEJS, text: 'Node.js' },
-      { icon: IconName.PRISMA, text: 'Prisma' },
-      { icon: IconName.EXPRESS, text: 'Express' },
-      { icon: IconName.REST, text: 'Rest API' },
-      { icon: IconName.FIREBASE, text: 'Firebase' },
-    ],
-    githubLinkFe: 'https://github.com/BruhovaAlena/event-app-fe',
-    githubLinkBe: 'https://github.com/BruhovaAlena/event-app-be',
-    demoLink: 'https://events-app-fe.onrender.com',
-  },
-  {
-    title: 'QR Code Generator',
-    desc: 'Generator for generating and downloading QR codes.',
-    icons: [
-      { icon: IconName.REACT, text: 'React' },
-      { icon: IconName.TYPESCRIPT, text: 'TypeScript' },
-      { icon: IconName.CHAKRA, text: 'Chakra UI' },
-    ],
-    githubLinkFe: 'https://github.com/BruhovaAlena/QRCodeGenerator',
-    demoLink: 'https://qr-code-generator-cn1o.onrender.com/',
-  },
-  {
-    title: 'Plant Shop Landing Page ',
-    desc: 'A fully responsive site built as landing page for Plant Shop developed using HTML5 and CSS3.',
-    icons: [
-      { icon: IconName.HTML, text: 'HTML5' },
-      { icon: IconName.CSS, text: 'CSS3' },
-    ],
-    githubLinkFe: 'https://github.com/BruhovaAlena/responsive-website',
-    demoLink: 'https://bruhovaalena.github.io/responsive-website/',
-  },
-  {
-    title: 'Crypto Currency Converter',
-    desc: 'A full stack web app for converting crypto currencies to usd with tracking of latest conversions and overall statistics of conversions for each crypto currency. The CoinMarketCap API is used to obtain data about conversion rates.',
-    icons: [
-      { icon: IconName.REACT, text: 'React' },
-      { icon: IconName.TYPESCRIPT, text: 'TypeScript' },
-      { icon: IconName.CHAKRA, text: 'Chakra UI' },
-      { icon: IconName.NODEJS, text: 'Node.js' },
-      { icon: IconName.PRISMA, text: 'Prisma' },
-      { icon: IconName.EXPRESS, text: 'Express' },
-    ],
-    githubLinkFe:
-      'https://github.com/BruhovaAlena/crypto-currency-converter-fe',
-    githubLinkBe:
-      'https://github.com/BruhovaAlena/crypto-currency-converter-be',
-    demoLink: 'https://crypto-currency-converter-fe.onrender.com',
-  },
-  {
-    title: 'Weather app',
-    desc: 'A simple web app to get weather data based on search using OpenWeather API.',
-    icons: [
-      { icon: IconName.REACT, text: 'React' },
-      { icon: IconName.JAVASCRIPT, text: 'JavaScript' },
-      { icon: IconName.STYLED, text: 'styled components' },
-      { icon: IconName.REST, text: 'Rest API' },
-    ],
-    githubLinkFe: 'https://github.com/BruhovaAlena/weather-app',
-    demoLink: 'https://github.com/BruhovaAlena/event-app-fe',
-  },
-];
+      { icon: IconName.AXIOS, text: 'Axios' },
+      { icon: IconName.FIGMA, text: 'Figma' },
+    ]
+  }
+
+]
+
 
 const Projects = () => {
   return (
@@ -110,34 +88,32 @@ const Projects = () => {
     >
       <Heading
         color="white"
-        fontFamily={theme.fonts.heading}
         textAlign={{ base: 'center', lg: 'left' }}
       >
-        Projects
+        Experience
       </Heading>
       <Box
         mt="5px"
         h="5px"
         w="200px"
-        bgGradient="linear(to-r, #AD7BE9,#3E54AC)"
+        bgGradient="linear(to-r, #AD7BE9,#14b8a6)"
         borderRadius="10px"
         mb="10px"
       ></Box>
 
-      <SimpleGrid columns={{ sm: 1, md: 2 }} spacing="10px">
-        {projects.map((project) => (
+      <Flex flexDirection='column' gap='20px'>
+        {experience.map((exp) => (
           <Project
-            desc={project.desc}
-            title={project.title}
-            githubLinkFe={project.githubLinkFe ? project.githubLinkFe : ''}
-            githubLinkBe={project.githubLinkBe ? project.githubLinkBe : ''}
-            demoLink={project.demoLink}
-            tools={project.icons}
-            apple={project.apple}
-            android={project.android}
+            description={exp.desc}
+            title={exp.title}
+            tools={exp.icons}
+            apple={exp.apple}
+            android={exp.android}
+            demoLink={exp.link}
+            date={exp.date}
           />
         ))}
-      </SimpleGrid>
+      </Flex>
     </Flex>
   );
 };

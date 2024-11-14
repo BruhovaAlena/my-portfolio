@@ -1,4 +1,4 @@
-import { Flex, Text, theme, Icon, Link } from '@chakra-ui/react';
+import { Flex, Text, Icon, Link } from '@chakra-ui/react';
 import { IconName, IconMapper } from '../../constants/icon';
 
 type ItemSkillProps = {
@@ -18,19 +18,18 @@ const ItemSkill = ({ text, iconName, urlAddress }: ItemSkillProps) => {
         height="100px"
         w="100px"
         alignItems="center"
-        fontFamily={theme.fonts.body}
         flexDir="column"
         pt="10px"
         _hover={{
           borderRadius: '6px',
-          bgGradient: 'linear(to-r, #AD7BE9,#3E54AC)',
+          bgGradient: 'linear(to-r, #AD7BE9,#14b8a6)',
           color: 'white',
           border: 'none',
         }}
       >
         <Icon as={IconMapper[iconName]} w="40px" h="40px" />
         <Flex h="100%" w="100%" alignItems="center" justifyContent="center">
-          <Text textAlign="center" fontWeight="semibold" lineHeight="18px">
+          <Text textAlign="center" fontWeight="semibold" lineHeight="18px" fontSize='small'>
             {text}
           </Text>
         </Flex>

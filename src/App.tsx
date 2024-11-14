@@ -6,6 +6,7 @@ import Contacts from './components/sections/Contacts';
 import Projects from './components/sections/Projects';
 import Skills from './components/sections/Skills';
 import Footer from './components/sections/Footer';
+import Certificates from './components/sections/Certificates';
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
         </Box>
         <Box id="projects" pt="30px">
           <Projects />
+        </Box>
+        <Box id="certificates" pt="30px">
+          <Certificates />
         </Box>
         <Box id="contacts" pt="30px">
           <Contacts />

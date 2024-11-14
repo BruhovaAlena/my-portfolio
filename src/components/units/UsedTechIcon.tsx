@@ -1,4 +1,3 @@
-import React from 'react';
 import { Flex, Icon, Text } from '@chakra-ui/react';
 import { IconName, IconMapper } from '../../constants/icon';
 
@@ -13,6 +12,7 @@ const UsedTechIcon = ({ iconName, title }: UsedTechIconProps) => {
       borderRadius="6px"
       borderWidth="1px"
       borderColor="lila"
+      bgColor='white'
       height="68px"
       width="68px"
       justifyContent="center"
@@ -22,7 +22,7 @@ const UsedTechIcon = ({ iconName, title }: UsedTechIconProps) => {
     >
       <Icon as={IconMapper[iconName]} w="20px" h="20px" />
       <Flex h="100%" w="100%" alignItems="center" justifyContent="center">
-        <Text textAlign="center" fontSize="xs">
+        <Text textAlign="center" fontSize='2xs' fontWeight='semibold'  >
           {title}
         </Text>
       </Flex>

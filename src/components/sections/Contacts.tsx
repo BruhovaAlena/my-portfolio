@@ -1,5 +1,4 @@
-import React from 'react';
-import { Flex, Text, Heading, Icon, Link, theme, Box } from '@chakra-ui/react';
+import { Flex, Text, Heading, Icon, Link, Box } from '@chakra-ui/react';
 import { BsLinkedin, BsGithub } from 'react-icons/bs';
 
 const Contacts = () => {
@@ -11,7 +10,6 @@ const Contacts = () => {
       alignItems={{ base: 'center', lg: 'flex-start' }}
     >
       <Heading
-        fontFamily={theme.fonts.heading}
         color="white"
         textAlign={{ sm: 'center', lg: 'left' }}
       >
@@ -22,16 +20,15 @@ const Contacts = () => {
         mt="5px"
         h="5px"
         w="200px"
-        bgGradient="linear(to-r, #AD7BE9,#3E54AC)"
+        bgGradient="linear(to-r, #AD7BE9,#14b8a6)"
         borderRadius="10px"
       ></Box>
       <Text
         color="white"
-        fontFamily={theme.fonts.body}
         textAlign={{ base: 'justify', lg: 'left' }}
         mt="10px"
       >
-        If you have any questions about me or my projects, you can find me on
+        If you have any questions about me, you can find me on
         social media
       </Text>
       <Flex mt="20px" gap="20px">
@@ -47,14 +44,13 @@ const Contacts = () => {
       </Flex>
       <Text
         color="white"
-        fontFamily={theme.fonts.body}
         textAlign={{ base: 'justify', lg: 'left' }}
         mt="10px"
       >
         or you can send me an email:{' '}
         <Text
           as="mark"
-          bgColor="lila"
+          bgGradient="linear(to-r, #AD7BE9,#14b8a6)"
           fontWeight="semibold"
           borderRadius="2px"
           px="2px"

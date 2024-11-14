@@ -13,7 +13,6 @@ const Skills = () => {
       >
         <Heading
           color="white"
-          fontFamily={theme.fonts.heading}
           textAlign={{ base: 'center', lg: 'left' }}
         >
           My skills
@@ -22,7 +21,7 @@ const Skills = () => {
           mt="5px"
           h="5px"
           w="200px"
-          bgGradient="linear(to-r, #AD7BE9,#3E54AC)"
+          bgGradient="linear(to-r, #AD7BE9,#14b8a6)"
           borderRadius="10px"
         ></Box>
 
@@ -55,6 +54,11 @@ const Skills = () => {
             urlAddress="https://reactnative.dev/"
           />
           <ItemSkill
+            text="Expo"
+            iconName={IconName.EXPO}
+            urlAddress="https://expo.dev/"
+          />
+          <ItemSkill
             text="React Query"
             iconName={IconName.REACT_HOOK_FORM}
             urlAddress="https://www.react-hook-form.com/"
@@ -63,6 +67,11 @@ const Skills = () => {
             text="React Hook Form"
             iconName={IconName.REACT_QUERY}
             urlAddress="https://tanstack.com/query/latest"
+          />
+           <ItemSkill
+            text="Tailwind"
+            iconName={IconName.TAILWIND}
+            urlAddress="https://tailwindcss.com/"
           />
           <ItemSkill
             text="styled components"
@@ -105,13 +114,14 @@ const Skills = () => {
             urlAddress="https://www.postgresql.org/"
           />
           <ItemSkill text="Rest API" iconName={IconName.REST} />
+          <ItemSkill text="Axios" iconName={IconName.AXIOS} urlAddress='https://axios-http.com/docs/intro'/>
+          <ItemSkill text="Figma" iconName={IconName.FIGMA} urlAddress='https://www.figma.com/' />
         </Flex>
       </Flex>
       <Flex flexDir="column" mt="40px" mx={{ base: '10px', md: '80px' }}>
         <Heading
           size="md"
           color="white"
-          fontFamily={theme.fonts.heading}
           textAlign={{ base: 'center', lg: 'left' }}
         >
           I am currently learning
@@ -129,14 +139,19 @@ const Skills = () => {
             urlAddress="https://nextjs.org/"
           />
           <ItemSkill
-            text="Tailwind"
-            iconName={IconName.TAILWIND}
-            urlAddress="https://tailwindcss.com/"
-          />
-          <ItemSkill
             text="Redux"
             iconName={IconName.REDUX}
             urlAddress="https://react-icons.github.io/react-icons/search?q=redux"
+          />
+          <ItemSkill
+            text="Cypress"
+            iconName={IconName.CYPRESS}
+            urlAddress="https://www.cypress.io/"
+          />
+          <ItemSkill
+            text="Playwright"
+            iconName={IconName.PLAYWRIGHT}
+            urlAddress="https://playwright.dev/"
           />
         </Flex>
       </Flex>

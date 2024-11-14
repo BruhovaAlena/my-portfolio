@@ -17,10 +17,16 @@ import {
   SiTailwindcss,
   SiRedux,
   SiReacthookform,
+  SiCypress,
+  SiPlaywright,
+  SiFigma,
+  SiExpo,
+  SiAxios
 } from 'react-icons/si';
 import { FaNodeJs } from 'react-icons/fa';
 import { TbBrandReactNative } from 'react-icons/tb';
 import { RestIcon } from '../icons/restIcon';
+import { GiMonsteraLeaf } from 'react-icons/gi';
 
 export enum IconName {
   GITHUB = 'github',
@@ -44,6 +50,12 @@ export enum IconName {
   TAILWIND = 'tailwind',
   REDUX = 'redux',
   REACT_HOOK_FORM = 'react_hook_form',
+  MONSTERA = 'monstera',
+  CYPRESS = 'cypress',
+  PLAYWRIGHT = 'playwright',
+  FIGMA = 'figma',
+  EXPO = 'expo',
+  AXIOS = 'axios'
 }
 
 export const IconMapper = {
@@ -68,4 +80,10 @@ export const IconMapper = {
   [IconName.NEXT]: SiNextdotjs,
   [IconName.REDUX]: SiRedux,
   [IconName.REACT_HOOK_FORM]: SiReacthookform,
+  [IconName.MONSTERA]: GiMonsteraLeaf,
+  [IconName.CYPRESS]: SiCypress,
+  [IconName.PLAYWRIGHT]: SiPlaywright,
+  [IconName.FIGMA]: SiFigma,
+  [IconName.EXPO]: SiExpo,
+  [IconName.AXIOS]: SiAxios
 };

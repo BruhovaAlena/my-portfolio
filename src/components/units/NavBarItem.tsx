@@ -1,4 +1,4 @@
-import { theme, Link } from '@chakra-ui/react';
+import { Link } from '@chakra-ui/react';
 
 export type NavBarItemProps = {
   href: string;
@@ -11,7 +11,6 @@ export const NavBarItem = ({ href, text }: NavBarItemProps) => {
       href={href}
       color="white"
       fontSize="20px"
-      fontFamily={theme.fonts.body}
       fontWeight="semibold"
     >
       {text}

@@ -9,8 +9,8 @@ import '@fontsource/alegreya-sans';
 
 const theme = extendTheme({
   fonts: {
-    heading: `'Monserrat', sans-serif`,
-    body: `'Monserrat', sans-serif`,
+     heading: 'Montserrat, sans-serif',
+    body: 'Montserrat, sans-serif',
   },
   colors: {
     lila: '#AD7BE9',

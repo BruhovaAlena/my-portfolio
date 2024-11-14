@@ -1,4 +1,4 @@
-import { Flex, Text, Heading, Box, theme } from '@chakra-ui/react';
+import { Flex, Text, Heading, Box } from '@chakra-ui/react';
 
 const AboutMe = () => {
   return (
@@ -11,7 +11,6 @@ const AboutMe = () => {
       >
         <Heading
           color="white"
-          fontFamily={theme.fonts.heading}
           textAlign={{ sm: 'center', lg: 'left' }}
         >
           About me
@@ -20,23 +19,15 @@ const AboutMe = () => {
           mt="5px"
           h="5px"
           w="200px"
-          bgGradient="linear(to-r, #AD7BE9,#3E54AC)"
+          bgGradient="linear(to-r, #AD7BE9,#14b8a6)"
           borderRadius="10px"
         ></Box>
         <Text
           color="white"
-          fontFamily={theme.fonts.body}
           textAlign={{ base: 'justify', lg: 'left' }}
           mt="10px"
         >
-          Young, driven and motivated self-taught developer based in Slovakia
-          with interest in building digital products using modern web
-          technologies. Web technologies and programming have been my hobby,
-          which has become a passion. Maybe I am not the best one, but I have
-          desire and mindset to always improve, learn fast and become as good as
-          possible.I am currently looking for a job, where I can improve my
-          skills as a developer, build modern web or hybrid mobile applications
-          and be useful part of the team.
+          I'm a junior frontend developer with a foundation in modern web development and basic testing skills. I actively educate myself through online courses and various educational platforms, staying up-to-date with the latest technologies and best practices. With experience in frontend libraries like React, React Native, Next.js and a passion for creating responsive, user-centered designs, I am currently looking for a job where I can continue to grow and contribute to a dynamic team on meaningful projects.
         </Text>
       </Flex>
     </Box>

@@ -17,7 +17,10 @@ const NavBar = () => {
       width="100%"
       overflow={'hidden'}
       zIndex={1}
-      bgGradient="linear(to-r, #AD7BE9,#3E54AC)"
+      bgGradient="linear(to-r, #AD7BE9,#14b8a6)"
+      borderBottomRightRadius='xl'
+      borderBottomLeftRadius='xl'
+      boxShadow='xl'
     >
       <Flex alignItems="center" wrap="wrap">
         <Icon

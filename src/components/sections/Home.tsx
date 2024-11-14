@@ -1,4 +1,4 @@
-import { Button, Flex, theme, Image, Show, Text } from '@chakra-ui/react';
+import { Button, Flex, Image, Show, Text } from '@chakra-ui/react';
 import { TypeAnimation } from 'react-type-animation';
 import myPhoto from '../../images/myPhoto.jpg';
 
@@ -24,6 +24,15 @@ const Home = () => {
         alignItems={{ base: 'center', lg: 'flex-start' }}
       >
         <Show below="md">
+          <Flex>
+        <Text
+              fontSize="16px"
+              fontWeight="bold"
+              mr="5px"
+              color="white"
+            >
+              Hi, I am Alena,
+            </Text>
           <TypeAnimation
             sequence={[
               ' Frontend Developer',
@@ -35,15 +44,16 @@ const Home = () => {
               ' #1 Harry Styles fan',
               500,
             ]}
-            style={{ fontSize: '16px', fontFamily: theme.fonts.heading }}
+            style={{ fontSize: '16px',   color: '#AD7BE9', fontWeight: 'bold'
+            }}
             repeat={Infinity}
           />
+          </Flex>
         </Show>
         <Show above="md">
           <Flex>
             <Text
               fontSize="32px"
-              fontFamily={theme.fonts.heading}
               fontWeight="bold"
               mr="5px"
               color="white"
@@ -63,7 +73,6 @@ const Home = () => {
               ]}
               style={{
                 fontSize: '32px',
-                fontFamily: theme.fonts.heading,
                 fontWeight: 'bold',
                 color: '#AD7BE9',
               }}
@@ -75,16 +84,15 @@ const Home = () => {
         <Button
           marginTop="10px"
           size="lg"
-          bgGradient="linear(to-r, #AD7BE9,#3E54AC)"
+          bgGradient="linear(to-r, #AD7BE9,#14b8a6)"
           variant="solid"
           color="white"
           w="200px"
-          fontFamily={theme.fonts.body}
           _hover={{
-            bgGradient: 'linear(to-l, #AD7BE9,#3E54AC)',
+            bgGradient: 'linear(to-l, #AD7BE9,#14b8a6)',
           }}
         >
-          <a href="#projects">Projects</a>
+          <a href="#projects">Experience</a>
         </Button>
       </Flex>
     </Flex>

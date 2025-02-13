@@ -154,9 +154,9 @@ const Skills = () => {
             urlAddress="https://playwright.dev/"
           />
           <ItemSkill
-            text="Playwright"
+            text="GraphQL"
             iconName={IconName.GRAPHQL}
-            urlAddress="https://playwright.dev/"
+            urlAddress="https://graphql.org/"
           />
         </Flex>
       </Flex>

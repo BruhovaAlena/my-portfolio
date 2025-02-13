@@ -1,4 +1,4 @@
-import { Flex, Box, theme, Heading } from '@chakra-ui/react';
+import { Flex, Box, Heading } from '@chakra-ui/react';
 import ItemSkill from '../units/ItemSkill';
 import { IconName } from '../../constants/icon';
 
@@ -151,6 +151,11 @@ const Skills = () => {
           <ItemSkill
             text="Playwright"
             iconName={IconName.PLAYWRIGHT}
+            urlAddress="https://playwright.dev/"
+          />
+          <ItemSkill
+            text="Playwright"
+            iconName={IconName.GRAPHQL}
             urlAddress="https://playwright.dev/"
           />
         </Flex>

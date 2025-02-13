@@ -21,7 +21,8 @@ import {
   SiPlaywright,
   SiFigma,
   SiExpo,
-  SiAxios
+  SiAxios,
+  SiGraphql
 } from 'react-icons/si';
 import { FaNodeJs } from 'react-icons/fa';
 import { TbBrandReactNative } from 'react-icons/tb';
@@ -55,7 +56,8 @@ export enum IconName {
   PLAYWRIGHT = 'playwright',
   FIGMA = 'figma',
   EXPO = 'expo',
-  AXIOS = 'axios'
+  AXIOS = 'axios',
+  GRAPHQL = 'graphql'
 }
 
 export const IconMapper = {
@@ -85,5 +87,6 @@ export const IconMapper = {
   [IconName.PLAYWRIGHT]: SiPlaywright,
   [IconName.FIGMA]: SiFigma,
   [IconName.EXPO]: SiExpo,
-  [IconName.AXIOS]: SiAxios
+  [IconName.AXIOS]: SiAxios,
+  [IconName.GRAPHQL]: SiGraphql
 };

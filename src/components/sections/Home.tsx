@@ -1,6 +1,6 @@
 import { Button, Flex, Image, Show, Text } from '@chakra-ui/react';
 import { TypeAnimation } from 'react-type-animation';
-import myPhoto from '../../images/myPhoto.jpg';
+import photo from '../../images/photo.jpg';
 
 const Home = () => {
   return (
@@ -11,7 +11,7 @@ const Home = () => {
       mt={10}
     >
       <Image
-        src={myPhoto}
+        src={photo}
         w={{ base: '200px', md: '250px', lg: '290px' }}
         h={{ base: '250px', md: '320px', lg: '370px' }}
         borderRadius="20px"
